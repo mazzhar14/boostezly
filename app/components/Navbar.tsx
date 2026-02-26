@@ -2,97 +2,86 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Phone, Mail, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
+
   return (
-    <nav className="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <header className="w-full fixed top-0 left-0 z-50 shadow-sm">
 
-        {/* Logo */}
-        <div
-          onClick={() => {
-            const hero = document.getElementById("home");
-            if (hero) {
-              hero.scrollIntoView({ behavior: "smooth" });
-            }
-          }}
-          className="flex items-center cursor-pointer"
-        >
-          <Image
-            src="/boostezly-logo.png"
-            alt="Boostezly LLC Logo"
-            width={120}
-            height={60}
-            className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
-          />
+      {/* ===== TOP CONTACT BAR ===== */}
+      <div className="hidden md:block bg-[#0B1C2D] text-white text-sm">
+        <div className="w-full px-6 lg:px-12 px-6 py-2 flex justify-between items-center">
+          
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2"> <Phone size={14} /> <span> 408-770-4607 </span> </div>
+            <div className="flex items-center gap-2"> <Mail size={14} /> <span> info@boostezly.com </span> </div>
+          </div>
+
         </div>
-
-        {/* Desktop Links */}
-        <div className="hidden md:flex space-x-8 text-gray-700 font-medium">
-          <a href="#services" className="hover:text-[#14B8A6] transition">
-            Services
-          </a>
-          <a href="#about" className="hover:text-[#14B8A6] transition">
-            About
-          </a>
-          <a href="#contact" className="hover:text-[#14B8A6] transition">
-            Contact
-          </a>
-        </div>
-
-        {/* Desktop CTA */}
-        <div className="hidden md:block">
-          <button className="bg-[#14B8A6] text-white px-5 py-2 rounded-lg hover:opacity-90 transition">
-            Book a Call
-          </button>
-        </div>
-
-        {/* Mobile Hamburger */}
-        <button
-          className="md:hidden text-2xl text-gray-700"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          ☰
-        </button>
       </div>
 
-      {/* Mobile Dropdown */}
-      {isOpen && (
-        <div className="md:hidden bg-white shadow-md px-6 py-4 flex flex-col space-y-4 text-gray-700 font-medium">
-          <a
-            href="#services"
-            onClick={() => setIsOpen(false)}
-            className="hover:text-[#14B8A6] transition"
-          >
-            Services
-          </a>
+      {/* ===== MAIN NAVBAR ===== */}
+      <nav className="bg-white border-b border-gray-200">
+       <div className="w-full px-6 lg:px-12 h-[80px] flex justify-between items-center">
+      
+      {/* ===== LOGO ===== */}
+          <div onClick={() => { const hero = document.getElementById("home"); if (hero) { hero.scrollIntoView({ behavior: "smooth" });} }} className="flex items-center cursor-pointer">
+            <Image src="/boostezly-logo.png" alt="Boostezly LLC Logo" width={1800} height={700} className="h-[55px] w-auto object-contain transition-transform duration-300 hover:scale-105" priority />
+          </div>
 
-          <a
-            href="#about"
-            onClick={() => setIsOpen(false)}
-            className="hover:text-[#14B8A6] transition"
-          >
-            About
-          </a>
+          {/* ===== DESKTOP NAVIGATION ===== */}
+          <div className="hidden md:flex items-center gap-10 text-gray-700 font-medium text-[15px]">
+            <button onClick={() => scrollToSection("home")} className="hover:text-[#14B8A6] transition">
+              Home
+            </button>
+            <button onClick={() => scrollToSection("services")} className="hover:text-[#14B8A6] transition">
+              Services
+            </button>
+            <button onClick={() => scrollToSection("about")} className="hover:text-[#14B8A6] transition">
+              About Us
+            </button>
+            <button onClick={() => scrollToSection("contact")} className="hover:text-[#14B8A6] transition">
+              Contact Us
+            </button>
+          </div>
 
-          <a
-            href="#contact"
-            onClick={() => setIsOpen(false)}
-            className="hover:text-[#14B8A6] transition"
-          >
-            Contact
-          </a>
+          {/* ===== RIGHT CTA ===== */}
+          <div className="hidden md:flex items-center gap-3">
+            <Phone size={18} className="text-[#14B8A6]" />
+            <span className="font-semibold text-gray-900">
+              408-770-4607
+            </span>
+          </div>
 
+          {/* ===== MOBILE MENU BUTTON ===== */}
           <button
-            onClick={() => setIsOpen(false)}
-            className="bg-[#14B8A6] text-white px-5 py-2 rounded-lg hover:opacity-90 transition"
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
           >
-            Book a Call
+            {isOpen ? <X /> : <Menu />}
           </button>
         </div>
-      )}
-    </nav>
+
+        {/* ===== MOBILE MENU ===== */}
+        {isOpen && (
+          <div className="md:hidden bg-white border-t px-6 py-6 flex flex-col gap-5 text-gray-700 font-medium">
+            <button onClick={() => scrollToSection("home")}>Home</button>
+            <button onClick={() => scrollToSection("services")}>Services</button>
+            <button onClick={() => scrollToSection("about")}>About Us</button>
+            <button onClick={() => scrollToSection("contact")}>Contact Us</button>
+          </div>
+        )}
+      </nav>
+    </header>
   );
 }
