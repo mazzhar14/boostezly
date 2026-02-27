@@ -1,3 +1,4 @@
+import ServicesPremium from "./components/ServicesPremium"
 import ParallaxSection from "./components/ParallaxSection";
 import FadeIn from "./components/FadeIn";
 
@@ -47,45 +48,8 @@ export default function Home() {
         </section>
 
       {/* Services Section */}
-      <section id="services" className="bg-gray-50 py-20 px-6 scroll-mt-24">
-        <div className="max-w-6xl mx-auto text-center">
-          <FadeIn>
-              <h2 className="text-3xl font-bold mb-12">Our Services</h2>
-          </FadeIn>
-
-          <div className="grid md:grid-cols-3 gap-8">
-
-            <div className="p-6 bg-white rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#14B8A6]">
-                Web Development
-              </h3>
-              <p className="text-gray-600">
-                High-performance websites built with modern technologies like
-                Next.js and React.
-              </p>
-            </div>
-
-            <div className="p-6 bg-white rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#14B8A6]">
-                Automation
-              </h3>
-              <p className="text-gray-600">
-                Streamline your business processes with smart automation and integrations.
-              </p>
-            </div>
-
-            <div className="p-6 bg-white rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#14B8A6]">
-                AI Solutions
-              </h3>
-              <p className="text-gray-600">
-                Leverage artificial intelligence to boost productivity and innovation.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {/* Premium Services */}
+      <ServicesPremium />
 
 
       <section
