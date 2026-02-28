@@ -36,7 +36,7 @@ export default function Navbar() {
       
       {/* ===== LOGO ===== */}
           <div onClick={() => { const hero = document.getElementById("home"); if (hero) { hero.scrollIntoView({ behavior: "smooth" });} }} className="flex items-center cursor-pointer">
-            <Image src="/boostezly-logo.png" alt="Boostezly LLC Logo" width={1800} height={700} className="h-[55px] w-auto object-contain transition-transform duration-300 hover:scale-105" priority />
+            <Image src="/boostezly-logo.png" alt="Boostezly LLC Logo" width={18000} height={7000} className="h-[55px] w-auto object-contain transition-transform duration-300 hover:scale-105" priority />
           </div>
 
           {/* ===== DESKTOP NAVIGATION ===== */}
