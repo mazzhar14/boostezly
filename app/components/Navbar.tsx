@@ -35,9 +35,8 @@ export default function Navbar() {
        <div className="w-full px-6 lg:px-12 h-[80px] flex justify-between items-center">
       
       {/* ===== LOGO ===== */}
-          <div onClick={() => { const hero = document.getElementById("home"); if (hero) { hero.scrollIntoView({ behavior: "smooth" });} }} className="flex items-center cursor-pointer">
-            <Image src="/boostezly-logo.png" alt="Boostezly LLC Logo" width={18000} height={7000} className="h-[55px] w-auto object-contain transition-transform duration-300 hover:scale-105" priority />
-          </div>
+          <div onClick={() => {const hero = document.getElementById("home"); if (hero) {hero.scrollIntoView({ behavior: "smooth" });} }} className="flex items-center cursor-pointer"> <Image src="/boostezly-logo.png" alt="Boostezly LLC Logo" width={1800} height={700} className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"/>  </div>
+
 
           {/* ===== DESKTOP NAVIGATION ===== */}
           <div className="hidden md:flex items-center gap-10 text-gray-700 font-medium text-[15px]">
