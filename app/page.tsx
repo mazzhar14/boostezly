@@ -44,20 +44,79 @@ export default function Home() {
 
       
       {/* About Section */}
-      <section id="about" className="py-20 px-6 scroll-mt-24">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            About Boostezly
-          </h2>
+      {/* ================= ULTRA PREMIUM ABOUT SECTION ================= */}
+<section id="about" className="relative py-28 px-6 bg-white overflow-hidden scroll-mt-24">
 
-          <p className="text-gray-600 text-lg leading-relaxed">
-            Boostezly LLC is a modern technology agency focused on building
-            high-performance websites, automation systems, and AI-driven
-            solutions. We help startups and businesses grow faster
-            with smart digital infrastructure.
-          </p>
-        </div>
-      </section>
+  {/* Teal Glow Background */}
+  <div className="absolute top-0 left-1/2 -translate-x-1/2
+                  w-[700px] h-[700px]
+                  bg-[#14B8A6]/10
+                  blur-3xl rounded-full" />
+
+  <div className="relative max-w-6xl mx-auto">
+
+    {/* Title */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        About Boostezly LLC
+      </h2>
+
+      <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+        Boostezly LLC, founded in 2004, is a full-service digital growth agency helping businesses scale through smart technology and data-driven marketing strategies.
+      </p>
+    </div>
+
+    {/* Cards */}
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {[
+        { title: "Digital Marketing (Google Ads & Meta Ads)", icon: "📊" },
+        { title: "Traffic Acquisition (Ads)", icon: "🚀" },
+        { title: "AI Chatbot Development", icon: "🤖" },
+        { title: "Shopify Store Setup & Optimization", icon: "🛒" },
+        { title: "Live Chat Assistant Integration", icon: "💬" },
+        { title: "Conversion Optimization", icon: "📈" },
+        { title: "Lead Generation Systems", icon: "🎯" },
+        { title: "Website Design & Development", icon: "💻" },
+        { title: "E-commerce Automation Solutions", icon: "⚙️" }
+      ].map((item, index) => (
+        <FadeIn key={index}>
+          <div
+            className="p-8 bg-white border border-gray-200 rounded-2xl
+                       shadow-sm hover:shadow-2xl
+                       hover:-translate-y-3
+                       transition-all duration-500"
+          >
+            <div className="text-3xl mb-4">{item.icon}</div>
+            <h4 className="text-lg font-semibold text-[#14B8A6]">
+              {item.title}
+            </h4>
+          </div>
+        </FadeIn>
+      ))}
+
+    </div>
+
+    {/* Bottom Description */}
+    <div className="mt-20 text-center max-w-4xl mx-auto">
+      <p className="text-gray-700 text-lg leading-relaxed">
+        With over two decades of experience, Boostezly LLC combines marketing expertise with advanced AI-driven tools to help businesses increase visibility, automate operations, and maximize revenue.
+      </p>
+
+      <div className="mt-10 p-8 bg-gray-50 rounded-2xl border border-gray-200">
+        <h4 className="text-xl font-semibold text-[#14B8A6] mb-3">
+          Our Mission
+        </h4>
+        <p className="text-gray-700 text-lg">
+          To help businesses grow faster using smart digital solutions.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+{/* ================= END ABOUT SECTION ================= */}
 
 
       {/* Contact Section */}
