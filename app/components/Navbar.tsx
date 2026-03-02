@@ -23,8 +23,14 @@ export default function Navbar() {
         <div className="w-full px-6 lg:px-12 px-6 py-2 flex justify-between items-center">
           
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2"> <Phone size={14} /> <span> 408-770-4607 </span> </div>
-            <div className="flex items-center gap-2"> <Mail size={14} /> <span> info@boostezly.com </span> </div>
+            <div className="flex items-center gap-2">
+              <Phone size={14} />
+              <span> 408-770-4607 </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail size={14} />
+              <span> info@boostezly.com </span>
+            </div>
           </div>
 
         </div>
@@ -32,11 +38,26 @@ export default function Navbar() {
 
       {/* ===== MAIN NAVBAR ===== */}
       <nav className="bg-white border-b border-gray-200">
-       <div className="w-full px-6 lg:px-12 h-[80px] flex justify-between items-center">
+        <div className="w-full px-6 lg:px-12 h-[80px] flex justify-between items-center">
       
-      {/* ===== LOGO ===== */}
-          <div onClick={() => {const hero = document.getElementById("home"); if (hero) {hero.scrollIntoView({ behavior: "smooth" });} }} className="flex items-center cursor-pointer"> <Image src="/boostezly-logo.png" alt="Boostezly LLC Logo" width={1800} height={700} className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"/>  </div>
-
+          {/* ===== LOGO ===== */}
+          <div
+            onClick={() => {
+              const hero = document.getElementById("home");
+              if (hero) {
+                hero.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="flex items-center cursor-pointer"
+          >
+            <Image
+              src="/boostezly-logo.png"
+              alt="Boostezly LLC Logo"
+              width={1800}
+              height={700}
+              className="h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
+            />
+          </div>
 
           {/* ===== DESKTOP NAVIGATION ===== */}
           <div className="hidden md:flex items-center gap-10 text-gray-700 font-medium text-[15px]">
@@ -55,11 +76,21 @@ export default function Navbar() {
           </div>
 
           {/* ===== RIGHT CTA ===== */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-4">
             <Phone size={18} className="text-[#14B8A6]" />
             <span className="font-semibold text-gray-900">
               408-770-4607
             </span>
+
+            {/* ===== PAYPAL BUTTON (NEW) ===== */}
+            <a
+              href="https://www.paypal.com/paypalme/YOUR_USERNAME"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#14B8A6] text-white px-5 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
+            >
+              💳 Pay Now
+            </a>
           </div>
 
           {/* ===== MOBILE MENU BUTTON ===== */}
