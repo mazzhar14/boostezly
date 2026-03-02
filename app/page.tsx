@@ -78,7 +78,7 @@ export default function Home() {
         { title: "Conversion Optimization", icon: "📈" },
         { title: "Lead Generation Systems", icon: "🎯" },
         { title: "Website Design & Development", icon: "💻" },
-        { title: "E-commerce Automation Solutions", icon: "⚙️" }
+        { title: "E-commerce Solutions", icon: "⚙️" }
       ].map((item, index) => (
         <FadeIn key={index}>
           <div
@@ -143,20 +143,18 @@ export default function Home() {
           <div>
             <h4 className="text-[#14B8A6] font-semibold">Address</h4>
             <p className="text-gray-700">
-              Boostezly LLC <br />
-              PO BOX - 152 <br />
-              United States
+              Boostezly LLC <br /> PO BOX - 152 <br /> Monroeville <br /> PA-15146 <br /> United States.
             </p>
           </div>
 
           <div>
             <h4 className="text-[#14B8A6] font-semibold">Email</h4>
-            <p className="text-gray-700">info@boostezly.com</p>
+            <p className="text-gray-700">info@boostezlyai.com</p>
           </div>
 
           <div>
-            <h4 className="text-[#14B8A6] font-semibold">Phone</h4>
-            <p className="text-gray-700">408-770-4607</p>
+            <h4 className="text-[#14B8A6] font-semibold"> Toll-Free </h4>
+            <p className="text-gray-700">888-322-2201</p>
           </div>
         </div>
       </div>

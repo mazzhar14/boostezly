@@ -25,7 +25,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <Phone size={14} />
-              <span> 408-770-4607 </span>
+              <span> 888-322-2201 </span>
             </div>
             <div className="flex items-center gap-2">
               <Mail size={14} />
@@ -77,9 +77,10 @@ export default function Navbar() {
 
           {/* ===== RIGHT CTA ===== */}
           <div className="hidden md:flex items-center gap-4">
+            <h4 className="text-[#14B8A6] font-semibold"> Toll-Free </h4>
             <Phone size={18} className="text-[#14B8A6]" />
             <span className="font-semibold text-gray-900">
-              408-770-4607
+              888-322-2201
             </span>
 
             {/* ===== PAYPAL BUTTON (NEW) ===== */}
