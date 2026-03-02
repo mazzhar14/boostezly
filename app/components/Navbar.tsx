@@ -29,7 +29,7 @@ export default function Navbar() {
             </div>
             <div className="flex items-center gap-2">
               <Mail size={14} />
-              <span> info@boostezly.com </span>
+              <span> info@boostezlyai.com </span>
             </div>
           </div>
 
