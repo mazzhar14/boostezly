@@ -62,31 +62,81 @@ export default function Home() {
 
       {/* Contact Section */}
       {/* ================= CONTACT SECTION ================= */}
-     <section id="contact" className="bg-gray-50 py-20 px-6 scroll-mt-24">
-       <div className="max-w-3xl mx-auto text-center"><h2 className="text-3xl font-bold mb-6"> Contact Us </h2> <p className="text-gray-600 mb-12"> Let’s discuss how we can help grow your business. </p>
+     
+<section
+  id="contact"
+  className="py-24 px-6 scroll-mt-24 bg-white"
+>
+  <div className="max-w-2xl mx-auto">
 
-        {/* ===== CONTACT FORM ===== */}
+    {/* ===== CARD ===== */}
+    <div className="bg-white rounded-3xl shadow-2xl p-10 border border-gray-200">
 
-        <form action="/api/contact" method="POST"  className="space-y-6 text-left">
-          <div>
-            <label className="block mb-2 text-sm font-medium text-gray-700"> Full Name </label>
-            <input type="text" name="name" required className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#14B8A6]" />
-          </div>
+      <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
+        Contact Us
+      </h2>
 
-          <div>
-            <label className="block mb-2 text-sm font-medium text-gray-700"> Email Address </label>
-            <input type="email" name="email" required className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#14B8A6]" />
-          </div>
+      <p className="text-center text-gray-600 mb-10">
+        Let’s build something powerful together.
+      </p>
 
-          <div>
-            <label className="block mb-2 text-sm font-medium text-gray-700"> Message </label> <textarea name="message" rows={5} required className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#14B8A6]" />
-          </div>
+      <form
+        action="/api/contact"
+        method="POST"
+        className="space-y-6"
+      >
 
-          <button type="submit" className="w-full bg-[#14B8A6] text-white px-6 py-3 rounded-lg hover:opacity-90 transition"> Send Message </button>
-        </form>
-      </div>
-     </section>
+        {/* Full Name */}
+        <div>
+          <label className="block mb-2 text-sm font-medium text-gray-700">
+            Full Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            required
+            className="w-full px-5 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-[#14B8A6] transition"
+          />
+        </div>
 
+        {/* Email */}
+        <div>
+          <label className="block mb-2 text-sm font-medium text-gray-700">
+            Email Address
+          </label>
+          <input
+            type="email"
+            name="email"
+            required
+            className="w-full px-5 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-[#14B8A6] transition"
+          />
+        </div>
+
+        {/* Message */}
+        <div>
+          <label className="block mb-2 text-sm font-medium text-gray-700">
+            Message
+          </label>
+          <textarea
+            name="message"
+            rows={5}
+            required
+            className="w-full px-5 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-[#14B8A6] transition resize-none"
+          />
+        </div>
+
+        {/* Submit Button */}
+        <button
+          type="submit"
+          className="w-full bg-[#14B8A6] text-white py-3 rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-300 font-medium"
+        >
+          Send Message
+        </button>
+
+      </form>
+    </div>
+  </div>
+</section>
 
 {/* ================= END CONTACT SECTION ================= */}
 
