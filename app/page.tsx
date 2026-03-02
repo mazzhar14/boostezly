@@ -61,55 +61,60 @@ export default function Home() {
 
 
       {/* Contact Section */}
-      {/* ================= CONTACT SECTION ================= */}
-     
-<section id="contact" className="py-24 px-6 bg-gray-50 scroll-mt-24">
+
+      {/* ================= CARD STYLE CONTACT SECTION ================= */}
+<section id="contact" className="py-24 px-4 sm:px-6 bg-gray-100 scroll-mt-24">
 
   <div className="max-w-6xl mx-auto">
 
-    {/* ===== TOP HEADING ===== */}
-    <div className="text-center mb-16">
-      <h2 className="text-3xl font-bold text-gray-900">
-        We Are Available 24/7
-      </h2>
-      <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-        Our combined expertise ensures your project is delivered to the highest standards.
-      </p>
-    </div>
+    {/* ===== TOP INFO ROW ===== */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
 
-    {/* ===== INFO + IMAGE ===== */}
-    <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+      {/* LEFT INFO */}
+      <div className="space-y-6 text-center md:text-left">
+        <h2 className="text-3xl font-bold text-gray-900">
+          We Are Available 24/7
+        </h2>
 
-      {/* Company Info */}
-      <div className="space-y-8">
-        <div>
-          <h4 className="text-[#14B8A6] font-semibold mb-2">Address</h4>
-          <p className="text-gray-700"> Boostezly LLC <br /> PO BOX -152 <br /> Monroeville <br /> PA-15146 <br /> United States.</p>
-        </div>
+        <p className="text-gray-600">
+          Our combined expertise ensures your project is delivered to the highest standards.
+        </p>
 
-        <div>
-          <h4 className="text-[#14B8A6] font-semibold mb-2">Email</h4>
-          <p className="text-gray-700">info@boostezly.com</p>
-        </div>
+        <div className="pt-6 space-y-4">
+          <div>
+            <h4 className="text-[#14B8A6] font-semibold">Address</h4>
+            <p className="text-gray-700">
+              Boostezly LLC <br />
+              PO BOX - 152 <br />
+              United States
+            </p>
+          </div>
 
-        <div>
-          <h4 className="text-[#14B8A6] font-semibold mb-2">Phone</h4>
-          <p className="text-gray-700">408-770-4607</p>
+          <div>
+            <h4 className="text-[#14B8A6] font-semibold">Email</h4>
+            <p className="text-gray-700">info@boostezly.com</p>
+          </div>
+
+          <div>
+            <h4 className="text-[#14B8A6] font-semibold">Phone</h4>
+            <p className="text-gray-700">408-770-4607</p>
+          </div>
         </div>
       </div>
 
-      {/* Image */}
+      {/* RIGHT IMAGE */}
       <div>
         <img
           src="/office-image.jpg"
           alt="Office"
-          className="rounded-2xl shadow-lg w-full object-cover"
+          className="rounded-2xl shadow-xl w-full object-cover"
         />
       </div>
+
     </div>
 
-    {/* ===== WHITE CARD FORM ===== */}
-    <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-200 p-12">
+    {/* ===== FORM CARD ===== */}
+    <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-8 sm:p-12 border border-gray-200">
 
       <h3 className="text-2xl font-bold text-center text-gray-900 mb-10">
         Get In Touch
@@ -118,7 +123,7 @@ export default function Home() {
       <form
         action="/api/contact"
         method="POST"
-        className="grid md:grid-cols-2 gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
       >
 
         <input
@@ -126,7 +131,7 @@ export default function Home() {
           name="firstName"
           placeholder="First Name"
           required
-          className="px-5 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-[#14B8A6] transition"
+          className="w-full px-5 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6]"
         />
 
         <input
@@ -134,14 +139,14 @@ export default function Home() {
           name="lastName"
           placeholder="Last Name"
           required
-          className="px-5 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-[#14B8A6] transition"
+          className="w-full px-5 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6]"
         />
 
         <input
           type="text"
           name="phone"
           placeholder="Phone Number"
-          className="px-5 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-[#14B8A6] transition"
+          className="w-full px-5 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6]"
         />
 
         <input
@@ -149,14 +154,14 @@ export default function Home() {
           name="email"
           placeholder="Email Address"
           required
-          className="px-5 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-[#14B8A6] transition"
+          className="w-full px-5 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6]"
         />
 
         <input
           type="text"
           name="subject"
           placeholder="Subject"
-          className="md:col-span-2 px-5 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-[#14B8A6] transition"
+          className="w-full md:col-span-2 px-5 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6]"
         />
 
         <textarea
@@ -164,14 +169,14 @@ export default function Home() {
           placeholder="Message"
           rows={5}
           required
-          className="md:col-span-2 px-5 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6] focus:border-[#14B8A6] transition resize-none"
+          className="w-full md:col-span-2 px-5 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#14B8A6] resize-none"
         />
 
-        {/* CENTERED BUTTON */}
+        {/* CENTER BUTTON */}
         <div className="md:col-span-2 flex justify-center mt-4">
           <button
             type="submit"
-            className="bg-[#14B8A6] text-white px-10 py-3 rounded-full hover:shadow-lg hover:scale-[1.03] transition-all duration-300 font-semibold"
+            className="bg-[#14B8A6] text-white px-10 py-3 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             Submit
           </button>
@@ -183,7 +188,9 @@ export default function Home() {
 
   </div>
 </section>
-{/* ================= END CONTACT SECTION ================= */}
+{/* ================= END SECTION ================= */}    
+
+
 
 
       {/* Footer */}
