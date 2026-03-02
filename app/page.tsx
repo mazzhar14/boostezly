@@ -12,7 +12,7 @@ export default function Home() {
         <section id="home" className="relative flex items-center justify-center text-center min-h-screen overflow-hidden"
 >
         {/* Background Image */}
-        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{backgroundImage: "url('/hero-bg.jpg')",}}/>
+        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{backgroundImage: "url('/hero-bg.png')",}}/>
 
         {/* Soft Gradient Overlay (More Premium Look) */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/60 to-white/80" />
