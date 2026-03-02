@@ -104,13 +104,23 @@ export default function Navbar() {
 
         {/* ===== MOBILE MENU ===== */}
         {isOpen && (
-          <div className="md:hidden bg-white border-t px-6 py-6 flex flex-col gap-5 text-gray-700 font-medium">
-            <button onClick={() => scrollToSection("home")}>Home</button>
-            <button onClick={() => scrollToSection("services")}>Services</button>
-            <button onClick={() => scrollToSection("about")}>About Us</button>
-            <button onClick={() => scrollToSection("contact")}>Contact Us</button>
-          </div>
-        )}
+              <div className="md:hidden bg-white border-t px-6 py-6 flex flex-col gap-5 text-gray-700 font-medium">
+              <button onClick={() => scrollToSection("home")}>Home</button>
+              <button onClick={() => scrollToSection("services")}>Services</button>
+              <button onClick={() => scrollToSection("about")}>About Us</button>
+              <button onClick={() => scrollToSection("contact")}>Contact Us</button>
+
+        {/* ===== MOBILE PAYPAL BUTTON ===== */}
+              <a
+              href="https://www.paypal.com/paypalme/YOUR_USERNAME"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 bg-[#14B8A6] text-white text-center px-5 py-3 rounded-full font-medium hover:shadow-lg transition"
+              >
+                💳 Pay Now
+              </a>
+            </div>
+          )}
       </nav>
     </header>
   );
